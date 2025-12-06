@@ -1,68 +1,79 @@
-# Environmental Epidemiology Seminar Work
-
-This repository contains my MPH (Biostatistics) student **seminar work project** in **Environmental Epidemiology** at the University of Haifa.
-
-The project title: **Positive genetic markers combined with air pollution exposure in the development of lung cancer in the Haifa District cohorts of different ethnic origin**.
-
-The project combines a **critical literature review** with **aggregated laboratory–clinical data** and **regional air pollution data** to explore gene–environment interactions in lung cancer in the Haifa District.
-
 ---
+Genetic markers combined with air pollution exposure in the development of lung cancer in a Northern Israeli cohort of different ethnic origins
+---
+
+Author: Nik Danilov, MD
+
+Institution: University of Haifa, School of Public Health
+
+Course: Environmental Epidemiology (Master of Public Health (Biostatistics) program)
+
+Year: 2025
+
+## Project overview
+
+This repository contains the code and analysis for a seminar work investigating the combined influence of genomic alterations and environmental exposures on lung cancer (LC) development in a Northern Israeli cohort.
+
+By integrating molecular biomarker data (EGFR, KRAS, PD-L1, etc.) with spatially resolved air pollution estimates, this study aimed to elucidate gene-environment interactions across cohorts of different ethnic origins.
+
+## Key research questions
+
+- Genomic profiling: What is the prevalence of key driver mutations (e.g., EGFR, KRAS) and PD-L1 expression in the local cohort? 
+
+
+- Spatial clustering: Do LC cases cluster geographically in the Haifa Bay area, a region known for industrial pollution? 
+
+- Confounder analysis: Is the observed clustering driven by environmental factors or by demographic confounders like smoking and population density? 
+
+
+## Tech stack & methodology
+
+This project utilized a mixed-tool analytical workflow to ensure rigorous data management, statistical testing, and visualization.
+
+- Data wrangling: Python (pandas), Excel. Cleaning and organizing raw clinical-laboratory data and air pollution metrics.
+
+- Statistical analysis:	Python (scipy, statsmodels). Descriptive statistics, Fisher's exact test, t-tests, and correlation analyses.
+
+- Spatial statistics:	Python (pysal / esda). Kernel density estimation (KDE) for hotspot visualization and Moran’s I / LISA for testing spatial autocorrelation and clustering significance.
+
+- Visualization: Python (matplotlib, seaborn), Power BI. Generating publication-quality plots and interactive geospatial maps.
+
+## Data sources
+
+- Clinical-laboratory data: A dataset of 94 LC cases managed at the Carmel Medical Center (Haifa) in 2024–2025. Variables include demographics, smoking history, histology, and NGS/IHC molecular results.
+ 
+- Environmental data: Annual mean concentrations of key pollutants (PM2.5, PM10, NO2, SO2, O3) obtained from the Israeli Ministry of Environmental Protection (MOEP) monitoring network (2023).
+
+## Key Findings
+
+### 1. The smoking confounder
+
+Initial crude mapping suggested significant spatial clustering of LC cases in the Haifa metropolitan area (p = 0.001). However, a rigorous analysis revealed this to be an artifact:
+
+- Population adjustment: When adjusting for population density, the "hotspots" shifted from coastal cities to inland areas (Nazareth, Afula).
+
+- Stratification: When stratified by smoking status, the spatial clustering disappeared entirely (Moran’s I non-significant for both smokers and non-smokers).
+
+Conclusion: Smoking, rather than environmental pollution, was identified as the primary driver of spatial heterogeneity in this specific cohort.
+
+### 2. Molecular epidemiology
+
+- Histology: Adenocarcinoma (ACA) was the dominant LC subtype (67.0%).
+
+- Biomarkers: High rates of actionable mutations were observed, with EGFR, BRAF, and ROS1 found exclusively in ACA cases.
+ 
+- Ethnicity: No significant difference in smoking prevalence was found between Jewish and Arab sub-populations in this cohort.
 
 ## Repository structure
 
-- **`README.md`** – Project overview and proposal (this file)
-- **`/docs/`** – Seminar work draft and related documents (`.qmd`, `.pdf`)
-- **`/data/`** – Aggregated datasets (air pollution, anonymized genetic/lab data)
-- **`/figures/`** – Maps, charts, and visualizations generated during analysis
-
----
-
-## Seminar work proposal"
-
-### Structure
-
-This seminar work will follow a **hybrid format** consisting of two main parts:
-
-1. **Theoretical part:**
-
-   - Critical review of international and Israeli literature on **gene–environment interactions** in lung cancer, focusing on air pollution exposure and selected genetic mutations.
-
-2. **Practical part:**
-
-   A. **Environmental exposure data:**
-
-   - Compilation and summary of **recent concrete data** on air pollution in the Haifa District.
-   - Geographic breakdown by subregions.
-   - Sources: **Governmental reports** (e.g., Ministry of Environmental Protection) and **Israeli epidemiological studies**.
-
-   B. **Laboratory–clinical data:**
-
-   - Use of **aggregated, anonymized data** from the Department of Pathology, Lady Davis Carmel Medical Center, Haifa.
-   - Identification of **genetic mutations** in lung tissue samples from histopathologically confirmed lung cancer cases.
-   - **Genes of interest:** EGFR, BRAF, KRAS, ALK, ROS1, RET (all via NGS), and PD-L1 (via IHC).
-   - Mapping of patients’ **residential locations** (city/town/village within the Haifa District).
-   - Categorization of **ethnic origin** (dichotomized as “Arab vs. Jewish”).
-
----
-
-### Cross-synthesis
-
-- **Overlay of pollution data with patient residence data** to visualize geographic patterns.
-- Assessment of **correlation and tendencies** between exposure levels and mutation-positive cases.
-- Exploration of **potential causality** and, if feasible, development of a **basic statistical model** (visualized using R or Python).
-
----
-
-### Conclusions and recommendations
-
-- Highlighting of **observed tendencies** and implications for **precision screening** and **targeted prevention**.
-- Provision of **public health recommendations** for Israel.
-- Emphasis on the need for **integrated genomic–environmental surveillance systems**.
-
----
-
-### Ethical considerations
-
-- Only **aggregated, anonymized data** will be used.
-- No identifiable patient information will be analyzed.
-- **IRB approval** (Helsinki Committee) is not required.
+├── data/
+│   ├── raw/                  # Raw clinical and environmental datasets (Anonymized)
+│   └── processed/            # Cleaned data ready for analysis
+├── notebooks/
+│   ├── 01_Data_Cleaning.ipynb    # Data preprocessing pipeline
+│   ├── 02_Descriptive_Stats.ipynb # Demographics and Biomarker analysis
+│   └── 03_Spatial_Analysis.ipynb  # KDE, Moran's I, and LISA clustering
+├── reports/
+│   └── Seminar_Work_Final.pdf    # Full text of the submitted seminar work
+├── src/                      # Helper Python scripts/modules
+└── README.md                 # Project overview
