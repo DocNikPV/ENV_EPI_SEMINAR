@@ -66,14 +66,20 @@ Conclusion: Smoking, rather than environmental pollution, was identified as the 
 
 ## Repository structure
 
-├── data/
-│   ├── raw/                  # Raw clinical and environmental datasets (Anonymized)
-│   └── processed/            # Cleaned data ready for analysis
-├── notebooks/
-│   ├── 01_Data_Cleaning.ipynb    # Data preprocessing pipeline
-│   ├── 02_Descriptive_Stats.ipynb # Demographics and Biomarker analysis
-│   └── 03_Spatial_Analysis.ipynb  # KDE, Moran's I, and LISA clustering
-├── reports/
-│   └── Seminar_Work_Final.pdf    # Full text of the submitted seminar work
-├── src/                      # Helper Python scripts/modules
-└── README.md                 # Project overview
+- analysis/
+        /CarmelMC_LungCancer.pbix    # Power BI report with interactive visualizations
+        /Python_mapping.py    # Python script for spatial analysis and mapping
+- data/
+      /CarmelMC_LungCancer.xlsx    # Cleaned clinical-laboratory dataset
+- outputs/
+         /a4bf230a-5fab-4e2d-a2a6-a255da8f0c8d.jpeg    # Example output figure from spatial analysis
+         /efbc4187-5b20-4685-a474-22cd24e26d0f.jpeg    # Example output figure from spatial analysis
+         /Figure_3.2.4.html    # Example output figure from spatial analysis
+         /id-locality_map.jpeg    # Example output figure from spatial analysis
+         /id-locality_plot.jpeg    # Example output figure from spatial analysis
+         /kde_LC_plot.jpeg    # Example output figure from spatial analysis
+         /output.png    # Example output figure from spatial analysis
+- .gitignore
+- ENV_EPI_SEMINAR.code-workspace
+- NikolaiDanilov_EnvEpi_SeminarWork.docx
+- README.md
