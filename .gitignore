@@ -1,5 +1,3 @@
-# Datasets
-
 # Python
 __pycache__/
 *.py[cod]
@@ -11,9 +9,6 @@ __pycache__/
 *.db-journal
 
 # Quarto / Pandoc
-*.html
-*.pdf
-*.docx
 _quarto/
 *.log
 *.aux
@@ -36,9 +31,3 @@ Thumbs.db
 .venv/
 env/
 venv/
-.Rproj.user
-
-*.pbix
-*.RData
-*.Rhistory
-.DS_Storegit init
