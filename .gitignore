@@ -43,6 +43,3 @@ data/**
 *.zsav
 *.por
 *.spv
-
-# exports you might choose to include; comment out if you want them tracked
-# output/**
