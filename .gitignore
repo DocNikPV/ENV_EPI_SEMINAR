@@ -31,3 +31,18 @@ Thumbs.db
 .venv/
 env/
 venv/
+
+# SPSS
+
+# data
+data/**
+!data/README.md
+
+# spss binaries
+*.sav
+*.zsav
+*.por
+*.spv
+
+# exports you might choose to include; comment out if you want them tracked
+# output/**

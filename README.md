@@ -1,14 +1,16 @@
 ---
-Genetic markers combined with air pollution exposure in the development of lung cancer in a Northern Israeli cohort of different ethnic origins
----
+Title: Genetic markers combined with air pollution exposure in the development of lung cancer in a Northern Israeli cohort of different ethnic origins
 
 Author: Nik Danilov, MD
 
 Institution: University of Haifa, School of Public Health
 
-Course: Environmental Epidemiology (Master of Public Health (Biostatistics) program)
+Program: Master of Public Health (Biostatistics)
+
+Course: Environmental Epidemiology 
 
 Year: 2025
+---
 
 ## Project overview
 
@@ -20,11 +22,9 @@ By integrating molecular biomarker data (EGFR, KRAS, PD-L1, etc.) with spatially
 
 - Genomic profiling: What is the prevalence of key driver mutations (e.g., EGFR, KRAS) and PD-L1 expression in the local cohort? 
 
-
 - Spatial clustering: Do LC cases cluster geographically in the Haifa Bay area, a region known for industrial pollution? 
 
 - Confounder analysis: Is the observed clustering driven by environmental factors or by demographic confounders like smoking and population density? 
-
 
 ## Tech stack & methodology
 
