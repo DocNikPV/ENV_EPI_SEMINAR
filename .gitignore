@@ -43,3 +43,4 @@ data/**
 *.zsav
 *.por
 *.spv
+.Rproj.user
